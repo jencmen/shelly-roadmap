@@ -4,15 +4,11 @@ import react from '@vitejs/plugin-react';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/shelly-roadmap/',
+  // ב-Vercel נהוג להשתמש ב-'/' (ברירת מחדל). 
+  // אם את נשארת ב-GitHub Pages, תשני חזרה ל- '/shelly-roadmap/'
+  base: '/',
   build: {
     outDir: 'dist',
     emptyOutDir: true,
-  },
-  resolve: {
-    alias: {
-      // Ensure we can resolve files from the root
-      '@': '/',
-    },
-  },
+  }
 });
